@@ -2,32 +2,260 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* :root {
+  --gradients-argon-30: #B4AEFF;
+} */
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
+:root,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #FFFDFD;
+  height: 100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+*::selection {
+  background-color: #EC5863;
+  color: #FFFDFD
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.gradient-text {
+  font-size: 170px;
+  font-weight: 800;
+  background: var(--gradients-argon-30, -webkit-linear-gradient(79deg, rgb(37, 187, 236, 0.4) 20%, #B4AEFF 24.87%, rgba(244, 125, 255, 0.94) 35.73%, rgba(57, 65, 255, 0.78) 58.09%, #6B94FD 73.64%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* mix-blend-mode: color-burn; */
+}
+
+.gradient-textNew {
+
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  background: var(--gradients-argon-30, linear-gradient(79deg, #B4AEFF 24.87%, rgba(244, 125, 255, 0.94) 35.73%, rgba(57, 65, 255, 0.78) 58.09%, #6B94FD 73.64%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* mix-blend-mode: color-burn; */
+
+}
+
+.shadow-one {
+  width: 1389.276px;
+  height: 400.928px;
+  transform: rotate(-25.756deg);
+  flex-shrink: 0;
+  border-radius: 1389.276px;
+  background: #00F0FF;
+  filter: blur(400px)
+}
+
+.shadow-five {
+  width: 400px;
+  height: 400.928px;
+  transform: rotate(0deg);
+  flex-shrink: 0;
+  border-radius: 1389.276px;
+  background: #00F0FF;
+
+  filter: blur(200px)
+}
+
+.shadow-two {
+  width: 932px;
+  height: 408px;
+  flex-shrink: 0;
+  border-radius: 932px;
+  background: var(--PreMed-Red-Pink, #EC5863);
+  filter: blur(300px);
+}
+
+.shadow-three {
+  width: 203.862px;
+  height: 402px;
+  transform: rotate(-6.535deg);
+  flex-shrink: 0;
+  border-radius: 752px;
+  background: #353197;
+  filter: blur(150px);
+}
+
+.shadow-four {
+  width: 1840.32px;
+  height: 407.068px;
+  transform: rotate(-4.601deg);
+  flex-shrink: 0;
+  border-radius: 1840.32px;
+  background: #FF90BA;
+
+  filter: blur(200px);
+}
+
+.shadow-six {
+  border-radius: 572px;
+  background: #3CB4CE;
+  width: 482px;
+  height: 372px;
+  filter: blur(150px);
+}
+
+.shadow-seven {
+  width: 755px;
+  height: 500px;
+  flex-shrink: 0;
+  border-radius: 755px;
+  opacity: 0.15;
+  background: var(--Pediatrix-Pink, #D5249A);
+  filter: blur(225px);
+}
+
+.shadow-eight {
+  width: 755px;
+  height: 657px;
+  flex-shrink: 0;
+  border-radius: 755px;
+  opacity: 0.5;
+  background: var(--gradients-argon-30, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(79deg, #B4AEFF 24.87%, rgba(244, 125, 255, 0.94) 35.73%, rgba(57, 65, 255, 0.78) 58.09%, #6B94FD 73.64%));
+  filter: blur(225px);
+  border-radius: 755px;
+  opacity: 0.5;
+
+  filter: blur(225px);
+}
+
+.gradient-text::selection {
+  background-color: transparent;
+  color: transparent;
+}
+
+.labelOne {
+  background: var(--Gradients-Linear-Pink, linear-gradient(90deg, #80239F 7.58%, #B43483 34.64%, #FE8B83 81.9%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 800;
+  mix-blend-mode: color-burn;
+  line-height: normal;
+}
+
+.imageCss {
+  border-radius: 50px;
+  background: linear-gradient(3deg, #000 5.53%, rgba(0, 0, 0, 0.00) 48.8%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(20px);
+}
+
+.blackEffect {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%);
+  opacity: 0.8;
+  filter: blur(30px)
+}
+
+.buttonCss {
+  border-radius: 12px;
+  background: var(--Gradients-Linear-Pink, linear-gradient(90deg, #80239F 7.58%, #B43483 34.64%, #FE8B83 81.9%));
+  display: flex;
+  padding: 13px 22px 13px 21px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(20px);
+  color: var(--Background, #F4F8F6);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+}
+
+.not-select::selection {
+  background: transparent;
+  color: transparent
+}
+.text-premed-Theme::selection{
+  color:#000
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
