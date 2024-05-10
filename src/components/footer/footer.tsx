@@ -55,7 +55,7 @@ const Footer = () => {
           <p className="pb-8 text-[20px] font-medium">
             Your all-in-one platform for MDCAT and other medical entry tests
             preparation. With over 100,000 questions and detailed explanations,
-            we're here to help you ace your exams and achieve your dreams
+            we&apos;re here to help you ace your exams and achieve your dreams
           </p>
           <div>
             <h6 className="text-[15px] font-semibold">Find Us on Socials</h6>
